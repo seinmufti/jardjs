@@ -26,6 +26,16 @@ const HomePage = () => {
     setH(0);
   };
 
+  //   Handling turning 0 to "" when clicked by user, and vise versa
+  const handleFocusBlur = (value, setValue) => ({
+    onFocus: () => {
+      if (value === 0) setValue("");
+    },
+    onBlur: () => {
+      if (value === "") setValue(0);
+    },
+  });
+
   return (
     <>
       <VStack mb={"4rem"}>
@@ -46,6 +56,7 @@ const HomePage = () => {
                 value={w}
                 onChange={(e) => setW(Number(e.target.value))}
                 min={1}
+                {...handleFocusBlur(w, setW)}
               >
                 <NumberInput.Input fontSize={"16px"} />
               </NumberInput.Root>
@@ -60,6 +71,7 @@ const HomePage = () => {
                 value={h}
                 onChange={(e) => setH(Number(e.target.value))}
                 min={1}
+                {...handleFocusBlur(h, setH)}
               >
                 <NumberInput.Input fontSize={"16px"} />
               </NumberInput.Root>
