@@ -17,16 +17,7 @@ const HomePage = () => {
   const [w, setW] = useState(0);
   const [h, setH] = useState(0);
 
-  const [measurements, setMeasurements] = useState([
-    { w: 2, h: 3 },
-    { w: 2, h: 3 },
-    { w: 2, h: 3 },
-    { w: 2, h: 3 },
-    { w: 2, h: 3 },
-    { w: 2, h: 3 },
-    { w: 2, h: 3 },
-    { w: 2, h: 3 },
-  ]);
+  const [measurements, setMeasurements] = useState([]);
 
   const addNewMeasurement = (w, h) => {
     const newMeasurement = { w: w, h: h };
