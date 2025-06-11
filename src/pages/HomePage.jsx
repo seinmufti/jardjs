@@ -2,7 +2,6 @@ import {
   Card,
   NumberInput,
   InputGroup,
-  HStack,
   VStack,
   Button,
   Heading,
@@ -20,7 +19,8 @@ const HomePage = () => {
   const [measurements, setMeasurements] = useState([]);
 
   const addNewMeasurement = (w, h) => {
-    const newMeasurement = { w: w, h: h };
+    const newIndex = measurements.length + 1;
+    const newMeasurement = { index: newIndex, w: w, h: h };
     setMeasurements([...measurements, newMeasurement]);
     setW(0);
     setH(0);
@@ -96,7 +96,7 @@ const HomePage = () => {
           {measurements.length === 0 ? (
             <p>No added measurements yet.</p>
           ) : (
-            <Table.ScrollArea borderWidth="1px" rounded="md" height="40vh">
+            <Table.ScrollArea borderWidth="1px" rounded="md" h="14rem">
               <Table.Root size="sm" striped stickyHeader>
                 <Table.Header>
                   <Table.Row>
@@ -106,13 +106,19 @@ const HomePage = () => {
                   </Table.Row>
                 </Table.Header>
                 <Table.Body>
-                  {measurements.map((measurement, index) => (
-                    <Table.Row key={index}>
-                      <Table.Cell>{index + 1}</Table.Cell>
-                      <Table.Cell>{measurement.w}</Table.Cell>
-                      <Table.Cell>{measurement.h}</Table.Cell>
-                    </Table.Row>
-                  ))}
+                  {
+                    // Display measaurements in descending order
+                    measurements
+                      .slice()
+                      .reverse()
+                      .map((measurement) => (
+                        <Table.Row key={measurement.index}>
+                          <Table.Cell>{measurement.index}</Table.Cell>
+                          <Table.Cell>{measurement.w}</Table.Cell>
+                          <Table.Cell>{measurement.h}</Table.Cell>
+                        </Table.Row>
+                      ))
+                  }
                 </Table.Body>
               </Table.Root>
             </Table.ScrollArea>
