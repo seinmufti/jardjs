@@ -47,7 +47,7 @@ const HomePage = () => {
                 onChange={(e) => setW(Number(e.target.value))}
                 min={1}
               >
-                <NumberInput.Input />
+                <NumberInput.Input fontSize={"16px"} />
               </NumberInput.Root>
             </InputGroup>
           </Box>
@@ -61,7 +61,7 @@ const HomePage = () => {
                 onChange={(e) => setH(Number(e.target.value))}
                 min={1}
               >
-                <NumberInput.Input />
+                <NumberInput.Input fontSize={"16px"} />
               </NumberInput.Root>
             </InputGroup>
           </Box>
