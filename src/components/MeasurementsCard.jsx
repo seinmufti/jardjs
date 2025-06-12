@@ -68,7 +68,7 @@ const MeasurementsCard = ({ measurements, setMeasurements }) => {
     <Card.Root width="95vw">
       <Card.Header>
         <HStack justify="space-between">
-          <Heading size={"xl"}>Submitted Measurements:</Heading>
+          <Heading size={"lg"}>Submitted Measurements:</Heading>
           {measurements.length != 0 &&
             (!editEnabled ? (
               <Button
