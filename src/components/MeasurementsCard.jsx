@@ -108,7 +108,7 @@ const MeasurementsCard = ({ measurements, setMeasurements }) => {
         {measurements.length === 0 ? (
           <p>No added measurements yet.</p>
         ) : (
-          <Table.ScrollArea borderWidth="1px" rounded="md" h="16rem">
+          <Table.ScrollArea borderWidth="1px" rounded="md" h="14rem">
             <Table.Root size="sm" striped stickyHeader>
               <Table.Header>
                 <Table.Row>
@@ -197,7 +197,7 @@ const MeasurementsCard = ({ measurements, setMeasurements }) => {
           </Table.ScrollArea>
         )}
       </Card.Body>
-      <Card.Footer />
+      <Card.Footer h={"0rem"} />
     </Card.Root>
   );
 };
