@@ -113,8 +113,8 @@ const MeasurementsCard = ({ measurements, setMeasurements }) => {
               <Table.Header>
                 <Table.Row>
                   <Table.ColumnHeader w={"10%"}>#</Table.ColumnHeader>
-                  <Table.ColumnHeader w={"37%"}>width</Table.ColumnHeader>
-                  <Table.ColumnHeader w={"37%"}>height</Table.ColumnHeader>
+                  <Table.ColumnHeader w={"35%"}>width</Table.ColumnHeader>
+                  <Table.ColumnHeader w={"35%"}>height</Table.ColumnHeader>
                   <Table.ColumnHeader w={"20%"}></Table.ColumnHeader>
                 </Table.Row>
               </Table.Header>
