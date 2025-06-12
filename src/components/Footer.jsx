@@ -1,18 +1,16 @@
 import React from "react";
-import { Text, Spacer } from "@chakra-ui/react";
+import { Text, Spacer, HStack } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
     <>
       <Spacer></Spacer>
-      <Text
-        fontSize="3xl"
-        fontFamily="'Pacifico', cursive"
-        color="green.600"
-        textAlign={"center"}
-      >
-        sein
-      </Text>
+      <HStack justifyContent={"center"}>
+        Developed by
+        <Text fontSize="3xl" fontFamily="'Pacifico', cursive" color="green.600">
+          sein
+        </Text>
+      </HStack>
     </>
   );
 };
