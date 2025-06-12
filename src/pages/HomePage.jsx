@@ -8,7 +8,7 @@ const HomePage = () => {
 
   return (
     <>
-      <VStack mb={"4rem"}>
+      <VStack>
         <MeasurementInputs
           measurements={measurements}
           setMeasurements={setMeasurements}

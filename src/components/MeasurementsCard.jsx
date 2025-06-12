@@ -65,7 +65,7 @@ const MeasurementsCard = ({ measurements, setMeasurements }) => {
   };
 
   return (
-    <Card.Root width="90vw">
+    <Card.Root width="95vw">
       <Card.Header>
         <HStack justify="space-between">
           <Heading size={"xl"}>Submitted Measurements:</Heading>
@@ -108,7 +108,7 @@ const MeasurementsCard = ({ measurements, setMeasurements }) => {
         {measurements.length === 0 ? (
           <p>No added measurements yet.</p>
         ) : (
-          <Table.ScrollArea borderWidth="1px" rounded="md" h="14rem">
+          <Table.ScrollArea borderWidth="1px" rounded="md" h="13rem">
             <Table.Root size="sm" striped stickyHeader>
               <Table.Header>
                 <Table.Row>
